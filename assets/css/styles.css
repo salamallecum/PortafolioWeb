@@ -227,6 +227,7 @@ img{
   padding: .75rem 2.5rem;
   font-weight: var(--font-semi);
   border-radius: .5rem;
+  font-family: sans-serif
 }
 .button:hover{
   box-shadow: 0 10px 36px rgba(0,0,0,.15);
@@ -351,6 +352,83 @@ img{
   margin-left: auto;
 }
 
+/*ESTILOS PARA LAS VALIDACIONES DEL FORMULARIO DE CONTACTO*/
+.contact__form{
+  --form-ok-color: #4caf50;
+  --form-error-color: #f44336;
+  margin-left: auto;
+  margin-right: auto;
+  width: 80%;
+}
+
+.contact__form > *{
+  padding: 0.5 rem;
+  margin: 1rem auto;
+  display: block;
+  width: 100%
+}
+
+.contact__form textarea{
+  resize: none;
+}
+
+.contact__form legend,
+.contact-form-response{
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+}
+
+.contact__input{
+  font-size: 1rem;
+  font-family: sans-serif;
+}
+
+.contact__form input[type="submit"]{
+  width: 50%;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.contact__form [required]:valid{
+  border: thin solid var(--form-ok-color);
+}
+
+.contact__form [required]:invalid{
+  border: thin solid var(--form-error-color);
+}
+
+.contact__form-error{
+  margin-top: -1rem;
+  font-size: 80%;
+  background-color: var(--form-error-color);
+  color: #fff;
+  transition: all 800ms ease;
+}
+
+.contact__form-error.is-active{
+  display: block;
+  animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+.none{
+  display: none;
+}
+
+@keyframes show-message{
+  0%{
+    visibility: hidden;
+    opacity: 0;
+  }
+
+  100%{
+    visibility: visible;
+    opacity: 1;
+  }
+}
+
+
+
 /* ===== FOOTER =====*/
 .footer{
   background-color: var(--second-color);
@@ -442,7 +520,7 @@ img{
     column-gap: 2rem;
   }
   .contact__form{
-    width: 360px;
+    width: 500px;
   }
   .contact__container{
     justify-items: center;

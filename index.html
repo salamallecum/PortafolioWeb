@@ -165,11 +165,11 @@
             <section class="contact section" id="contact">
                 <h2 class="section-title">Contáctame</h2>
                 <div class="contact__container bd-grid">
-                    <form action="" class="contact__form">
+                    <form id="form" action="https://formsubmit.co/luisalejandroamayatorres@gmail.com" method="POST" class="contact__form">
                         <legend class="leyenda">Envíame tus comentarios</legend>
-                        <input type="text" name="name" placeholder="Escribe tu nombre" title="El nombre sólo acepta letras y espacios en blanco" class="contact__input" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
-                        <input type="email" name="email" placeholder="Escribe tu correo" title="Email incorrecto" class="contact__input" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
-                        <input type="text" name="subject" placeholder="Asunto a tratar" title="El asunto es requerido" class="contact__input" required>
+                        <input type="text" name="name" placeholder="Nombre completo" title="El nombre sólo acepta letras y espacios en blanco" class="contact__input" pattern="^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$" required>
+                        <input type="email" name="email" placeholder="Email" title="Email incorrecto" class="contact__input" pattern="^[a-z0-9]+(\.[_a-z0-9]+)*@[a-z0-9-]+(\.[a-z0-9-]+)*(\.[a-z]{2,15})$" required>
+                        <input type="text" name="subject" placeholder="Asunto" title="El asunto es requerido" class="contact__input" required>
                         <textarea name="Comments" id="" cols="50" placeholder="Escribe tus comentarios" rows="5" title="Tu comentario no debe exceder los 255 caracteres" class="contact__input" data-pattern="^.{1,255}$" required></textarea>
                         <input type="submit" value="Enviar" class="contact__button button">
 
@@ -177,7 +177,7 @@
                             <img src="assets/img/loader.svg" alt="Cargando">
                         </div>
                         <div class="contact-form-response none">
-                            <p>Los datos han sido enviados</p>
+                            <p>Tus datos han sido enviados</p>
                         </div>
                     </form>
                 </div>
@@ -200,7 +200,6 @@
         <script src="https://unpkg.com/scrollreveal"></script>
 
         <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js"></script>
-        <script src="assets/js/validaciones_formulario.js></script>
+        <script src="assets/js/main.js" type="module"></script>        
     </body>
 </html>

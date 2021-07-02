@@ -404,6 +404,8 @@ img{
   background-color: var(--form-error-color);
   color: #fff;
   transition: all 800ms ease;
+  text-align: center;
+  border-radius: .3rem;
 }
 
 .contact__form-error.is-active{

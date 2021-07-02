@@ -326,6 +326,10 @@ img{
 	display: flex;
 	justify-content: center;
 	flex-wrap: wrap;
+  margin: 10px 20px;
+  font-size: 18px;
+  font-weight: 700;
+  color: #000;
 }
 
 .contact__input{

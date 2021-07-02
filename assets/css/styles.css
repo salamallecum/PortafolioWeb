@@ -322,6 +322,12 @@ img{
 }
 
 /* ===== CONTACT =====*/
+.leyenda {
+	display: flex;
+	justify-content: center;
+	flex-wrap: wrap;
+}
+
 .contact__input{
   width: 100%;
   font-size: var(--normal-font-size);

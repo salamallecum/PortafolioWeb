@@ -38,8 +38,8 @@ d.addEventListener('keyup', (e) =>{
 
 //Aqui hacemos el envio del formulario para que llegue a tu correo personal
 d.addEventListener("submit", (e) => {
-  e.preventDefault();
-  alert("Enviando formulario...");
+  //e.preventDefault();
+  //alert("Enviando formulario...");
 
   const $loader = d.querySelector(".contact-form-loader"),
     $response = d.querySelector(".contact-form-response");
@@ -54,5 +54,8 @@ d.addEventListener("submit", (e) => {
       setTimeout(() => $response.classList.add("none"), 3000);
     }, 3000);
 });
+
+
+
 
 

@@ -1,36 +1,34 @@
-window.addEventListener('load', () => {
-	grid.refreshItems().layout();
-	document.getElementById('grid').classList.add('imagenes-cargadas');
+const d = document;
 
-	// Agregamos los listener de los enlaces para filtrar por categoria.
-	const enlaces = document.querySelectorAll('#categorias a');
-	enlaces.forEach((elemento) => {
-		elemento.addEventListener('click', (evento) => {
-			evento.preventDefault();
-			enlaces.forEach((enlace) => enlace.classList.remove('activo'));
-			evento.target.classList.add('activo');
+export default function contactFormValidations(){
 
-			const categoria = evento.target.innerHTML.toLowerCase();
-			categoria === 'todos' ? grid.filter('[data-categoria]') : grid.filter(`[data-categoria="${categoria}"]`);
-		});
-	});
+    window.addEventListener('load', () => {
+        grid.refreshItems().layout();
+        d.getElementById('work__container').classList.add('imagenes-cargadas');
 
-	// Agregamos el listener para la barra de busqueda
-	document.querySelector('#barra-busqueda').addEventListener('input', (evento) => {
-		const busqueda = evento.target.value;
-		grid.filter( (item) => item.getElement().dataset.etiquetas.includes(busqueda) );
-	});
+        // Agregamos los listener de los enlaces para filtrar por categoria.
+        const enlaces = d.querySelectorAll('#categorias a');
+        enlaces.forEach((elemento) => {
+            elemento.addEventListener('click', (evento) => {
+                evento.preventDefault();
+                enlaces.forEach((enlace) => enlace.classList.remove('activo'));
+                evento.target.classList.add('activo');
+
+                const categoria = evento.target.innerHTML.toLowerCase();
+                categoria === 'todos' ? grid.filter('[data-categoria]') : grid.filter(`[data-categoria="${categoria}"]`);
+            });
+        });
 
 	// Agregamos listener para las imagenes
-	const overlay = document.getElementById('overlay');
-	document.querySelectorAll('.grid .item img').forEach((elemento) => {
+	const overlay = d.getElementById('overlay');
+	d.querySelectorAll('.work__container .work__img').forEach((elemento) => {
 		elemento.addEventListener('click', () => {
 			const ruta = elemento.getAttribute('src');
 			const descripcion = elemento.parentNode.parentNode.dataset.descripcion;
 
 			overlay.classList.add('activo');
-			document.querySelector('#overlay img').src = ruta;
-			document.querySelector('#overlay .descripcion').innerHTML = descripcion;
+			d.querySelector('#overlay img').src = ruta;
+			d.querySelector('#overlay .descripcion').innerHTML = descripcion;
 		});
 	});
 
@@ -44,3 +42,4 @@ window.addEventListener('load', () => {
 		evento.target.id === 'overlay' ? overlay.classList.remove('activo') : '';
 	});
 });
+}

@@ -62,6 +62,7 @@ sr.reveal('.contact__input',{interval: 200});
 const d = document;
 d.addEventListener("DOMContentLoaded", (e) => {
     contactFormValidations();
+    filtradoYDetallesDeMisProyectos();
 });
 
 

@@ -135,31 +135,88 @@
                 </div>
             </section>
 
-            <!--===== WORK =====-->
+            <!--===== MIS PROYECTOS =====-->
             <section class="work section" id="work">
-                <h2 class="section-title">Work</h2>
+                <h2 class="section-title">Mis proyectos</h2>
 
-                <div class="work__container bd-grid">
-                    <div class="work__img">
-                        <img src="assets/img/work1.jpg" alt="">
-                    </div>
-                    <div class="work__img">
-                        <img src="assets/img/work2.jpg" alt="">
-                    </div>
-                    <div class="work__img">
-                        <img src="assets/img/work3.jpg" alt="">
-                    </div>
-                    <div class="work__img">
-                        <img src="assets/img/work4.jpg" alt="">
-                    </div>
-                    <div class="work__img">
-                        <img src="assets/img/work5.jpg" alt="">
-                    </div>
-                    <div class="work__img">
-                        <img src="assets/img/work6.jpg" alt="">
-                    </div>
+                <div class="categorias" id="categorias">
+                    <a href="#" class="activo">Todos</a>
+                    <a href="#">Naturaleza</a>
+                    <a href="#">Ciudades</a>
+                    <a href="#">Personas</a>
+                    <a href="#">Animales</a>
                 </div>
-            </section>
+
+                <section class="work__container bd-grid">
+                    <div class="work__img" 
+                        data-categoria="ciudades"
+                        data-descripcion="Lorem, ipsum dolor sit amet hgdndkjssj hbchscsjcnskcnskcnks"
+                    >   
+                        <div class="item-contenido">
+                            <img src="assets/img/work1.jpg" alt="">
+                            <p>Nombre del proyecto</p>
+                        </div>   
+                    </div>
+
+                    <div class="work__img" 
+                        data-categoria="ciudades"
+                        data-descripcion="Lorem, ipsum dolor sit amet hgdndkjssj hbchscsjcnskcnskcnks"
+                    >   
+                        <div class="item-contenido">
+                            <img src="assets/img/work2.jpg" alt="">
+                            <p>Nombre del proyecto</p>
+                        </div>   
+                    </div>
+
+                    <div class="work__img" 
+                        data-categoria="ciudades"
+                        data-descripcion="Lorem, ipsum dolor sit amet hgdndkjssj hbchscsjcnskcnskcnks"
+                    >   
+                        <div class="item-contenido">
+                            <img src="assets/img/work3.jpg" alt="">
+                            <p>Nombre del proyecto</p>
+                        </div>   
+                    </div>
+
+                    <div class="work__img" 
+                        data-categoria="ciudades"
+                        data-descripcion="Lorem, ipsum dolor sit amet hgdndkjssj hbchscsjcnskcnskcnks"
+                    >   
+                        <div class="item-contenido">
+                            <img src="assets/img/work4.jpg" alt="">
+                            <p>Nombre del proyecto</p>
+                        </div>   
+                    </div>
+
+                    <div class="work__img" 
+                        data-categoria="ciudades"
+                        data-descripcion="Lorem, ipsum dolor sit amet hgdndkjssj hbchscsjcnskcnskcnks"
+                    >   
+                        <div class="item-contenido">
+                            <img src="assets/img/work5.jpg" alt="">
+                            <p>Nombre del proyecto</p>
+                        </div>   
+                    </div>
+
+                    <div class="work__img" 
+                        data-categoria="ciudades"
+                        data-descripcion="Lorem, ipsum dolor sit amet hgdndkjssj hbchscsjcnskcnskcnks"
+                    >   
+                        <div class="item-contenido">
+                            <img src="assets/img/work6.jpg" alt="">
+                            <p>Nombre del proyecto</p>
+                        </div>   
+                    </div>                    
+                </section>
+
+                <section class="overlay" id="overlay">
+                    <div class="contenedor-img">
+                        <button id="btn-cerrar-popup"><i class="fas fa-times"></i></button>
+                        <img src="" alt="">
+                    </div>
+                    <p class="descripcion"></p>
+                </section>
+            </section>        
 
             <!--===== CONTACTAME =====-->
             <section class="contact section" id="contact">
@@ -200,7 +257,6 @@
             <p>Tel: +57 - 3156025903</p>
             <p>&#169; 2021 Copyright all right reserved</p>
         </footer>
-
 
         <!--===== SCROLL REVEAL =====-->
         <script src="https://unpkg.com/scrollreveal"></script>

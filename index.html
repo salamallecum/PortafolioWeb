@@ -23,6 +23,15 @@
 
         <title>Portfolio website complete</title>
     </head>
+    <script>
+        window.onload=function(){
+        var pos=window.name || 0;
+        window.scrollTo(0,pos);
+        }
+        window.onunload=function(){
+        window.name=self.pageYOffset || (document.documentElement.scrollTop+document.body.scrollTop);
+        }
+    </script>
     <body>
         <!--===== HEADER =====-->
         <header class="l-header">
@@ -152,35 +161,35 @@
                 <h2 class="section-title">Mis proyectos</h2>
                 <div class="project-wrapper">
                     <div class="category_list">
-                        <a href="#" class="category_item" category="all">Todos</a>
-                        <a href="#" class="category_item" category="java">Java</a>
-                        <a href="#" class="category_item" category="python">Python</a>
-                        <a href="#" class="category_item" category="android">Android</a>
+                        <a href="#work" class="category_item" category="all">Todos</a>
+                        <a href="#work" class="category_item" category="java">Java</a>
+                        <a href="#work" class="category_item" category="python">Python</a>
+                        <a href="#work" class="category_item" category="android">Android</a>
                     </div>
                     <section class="project-list">
                         <div class="project-item" category="java">
                             <img src="assets/img/iphone.jpg" alt="">
-                            <a href="#">Proyecto Java</a>
+                            <a type="submit" href="#">Proyecto Java</a>
                         </div>
                         <div class="project-item" category="java">
                             <img src="assets/img/jbl.jpg" alt="">
-                            <a href="#">Proyecto Java</a>
+                            <a type="submit" href="#">Proyecto Java</a>
                         </div>
                         <div class="project-item" category="python">
                             <img src="assets/img/laptop_hp.jpg" alt="">
-                            <a href="#">Proyecto Python</a>
+                            <a type="submit" href="#">Proyecto Python</a>
                         </div>
                         <div class="project-item" category="python">
                             <img src="assets/img/laptop_toshiba.jpg" alt="">
-                            <a href="#">Proyecto Python</a>
+                            <a type="submit" href="#">Proyecto Python</a>
                         </div>
                         <div class="project-item" category="java">
                             <img src="assets/img/monitor_asus.jpg" alt="">
-                            <a href="#">Proyecto Java</a>
+                            <a type="submit" href="#">Proyecto Java</a>
                         </div>
                         <div class="project-item" category="android">
                             <img src="assets/img/pc_hp.jpg" alt="">
-                            <a href="#">Proyecto Android</a>
+                            <a type="submit" href="#">Proyecto Android</a>
                         </div>
                     </section>
                 </div>                    

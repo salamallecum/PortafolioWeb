@@ -1,5 +1,5 @@
 $(document).ready(function(){
-    
+        
     //Se agrega la clase active al primer enlace
     $('.category_list .category_item[category="all"]').addClass('ct_item-active');
 

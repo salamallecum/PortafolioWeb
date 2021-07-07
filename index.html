@@ -4,8 +4,20 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+        <!--===== ESTILOS Y FUENTES =====-->
         <link rel="stylesheet" href="assets/css/styles.css">
-
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap" rel="stylesheet">
+        
+        <!--===== SCROLL REVEAL =====-->
+        <script src="https://unpkg.com/scrollreveal"></script>
+        
+        <!--===== SCRIPTS JS =====-->
+        <script src="assets/js/main.js"></script>
+        <script src="assets/js/jquery-3.6.0.js"></script>
+        <script src="assets/js/misProyectos.js"></script>
+        
         <!-- =====BOX ICONS===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
@@ -138,83 +150,40 @@
             <!--===== MIS PROYECTOS =====-->
             <section class="work section" id="work">
                 <h2 class="section-title">Mis proyectos</h2>
-
-                <div class="categorias" id="categorias">
-                    <a href="#" class="activo">Todos</a>
-                    <a href="#">Java</a>
-                    <a href="#">Python</a>
-                    <a href="#">Android</a>
-                </div>
-
-                <section class="work__container bd-grid">
-                    <div class="work__img" 
-                        data-categoria="java"
-                        data-descripcion="Lorem, ipsum dolor sit amet hgdndkjssj hbchscsjcnskcnskcnks"
-                    >   
-                        <div class="item-contenido">
-                            <img src="assets/img/work1.jpg" alt="">
-                            <p>Nombre del proyecto</p>
-                        </div>   
+                <div class="project-wrapper">
+                    <div class="category_list">
+                        <a href="#" class="category_item" category="all">Todos</a>
+                        <a href="#" class="category_item" category="java">Java</a>
+                        <a href="#" class="category_item" category="python">Python</a>
+                        <a href="#" class="category_item" category="android">Android</a>
                     </div>
-
-                    <div class="work__img" 
-                        data-categoria="python"
-                        data-descripcion="Lorem, ipsum dolor sit amet hgdndkjssj hbchscsjcnskcnskcnks"
-                    >   
-                        <div class="item-contenido">
-                            <img src="assets/img/work2.jpg" alt="">
-                            <p>Nombre del proyecto</p>
-                        </div>   
-                    </div>
-
-                    <div class="work__img" 
-                        data-categoria="java"
-                        data-descripcion="Lorem, ipsum dolor sit amet hgdndkjssj hbchscsjcnskcnskcnks"
-                    >   
-                        <div class="item-contenido">
-                            <img src="assets/img/work3.jpg" alt="">
-                            <p>Nombre del proyecto</p>
-                        </div>   
-                    </div>
-
-                    <div class="work__img" 
-                        data-categoria="java"
-                        data-descripcion="Lorem, ipsum dolor sit amet hgdndkjssj hbchscsjcnskcnskcnks"
-                    >   
-                        <div class="item-contenido">
-                            <img src="assets/img/work4.jpg" alt="">
-                            <p>Nombre del proyecto</p>
-                        </div>   
-                    </div>
-
-                    <div class="work__img" 
-                        data-categoria="android"
-                        data-descripcion="Lorem, ipsum dolor sit amet hgdndkjssj hbchscsjcnskcnskcnks"
-                    >   
-                        <div class="item-contenido">
-                            <img src="assets/img/work5.jpg" alt="">
-                            <p>Nombre del proyecto</p>
-                        </div>   
-                    </div>
-
-                    <div class="work__img" 
-                        data-categoria="python"
-                        data-descripcion="Lorem, ipsum dolor sit amet hgdndkjssj hbchscsjcnskcnskcnks"
-                    >   
-                        <div class="item-contenido">
-                            <img src="assets/img/work6.jpg" alt="">
-                            <p>Nombre del proyecto</p>
-                        </div>   
-                    </div>                    
-                </section>
-
-                <section class="overlay" id="overlay">
-                    <div class="contenedor-img">
-                        <button id="btn-cerrar-popup"><i class="fas fa-times"></i></button>
-                        <img src="" alt="">
-                    </div>
-                    <p class="descripcion"></p>
-                </section>
+                    <section class="project-list">
+                        <div class="project-item" category="java">
+                            <img src="assets/img/iphone.jpg" alt="">
+                            <a href="#">Proyecto Java</a>
+                        </div>
+                        <div class="project-item" category="java">
+                            <img src="assets/img/jbl.jpg" alt="">
+                            <a href="#">Proyecto Java</a>
+                        </div>
+                        <div class="project-item" category="python">
+                            <img src="assets/img/laptop_hp.jpg" alt="">
+                            <a href="#">Proyecto Python</a>
+                        </div>
+                        <div class="project-item" category="python">
+                            <img src="assets/img/laptop_toshiba.jpg" alt="">
+                            <a href="#">Proyecto Python</a>
+                        </div>
+                        <div class="project-item" category="java">
+                            <img src="assets/img/monitor_asus.jpg" alt="">
+                            <a href="#">Proyecto Java</a>
+                        </div>
+                        <div class="project-item" category="android">
+                            <img src="assets/img/pc_hp.jpg" alt="">
+                            <a href="#">Proyecto Android</a>
+                        </div>
+                    </section>
+                </div>                    
             </section>        
 
             <!--===== CONTACT =====-->
@@ -243,10 +212,5 @@
             <p>&#169; 2020 copyright all right reserved</p>
         </footer>
 
-        <!--===== SCROLL REVEAL =====-->
-        <script src="https://unpkg.com/scrollreveal"></script>
-
-        <!--===== MAIN JS =====-->
-        <script src="assets/js/main.js" type="module"></script>
     </body>
 </html>

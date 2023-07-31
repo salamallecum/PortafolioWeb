@@ -1,4 +1,3 @@
-import contactFormValidations from "./dom/validacionesFormulario.js";
 
 /*===== MENU SHOW =====*/ 
 const showMenu = (toggleId, navId) =>{
@@ -61,8 +60,7 @@ sr.reveal('.contact__input',{interval: 200});
 /*Metodo que se invoca al iniciar la aplicación*/
 const d = document;
 d.addEventListener("DOMContentLoaded", (e) => {
-    contactFormValidations();
-    filtradoYDetallesDeMisProyectos();
+    /*filtradoYDetallesDeMisProyectos();*/
 });
 
 

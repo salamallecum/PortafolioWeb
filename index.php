@@ -64,8 +64,8 @@
                 </div>
 
                 <div class="home__social">
-                    <a href="https://www.linkedin.com/in/luis-alejandro-amaya-torres-937237115/" class="home__social-icon" target="_blank"><i class='bx bxl-linkedin'></i></a>
-                    <a href="https://github.com/salamallecum" class="home__social-icon" target="_blank"><i class='bx bxl-github' ></i></a>
+                    <a href="https://www.linkedin.com/in/luis-alejandro-amaya-torres-937237115/" title="Mi LinkedIn" class="home__social-icon" target="_blank"><i class='bx bxl-linkedin'></i></a>
+                    <a href="https://github.com/salamallecum" title="Mi GitHub" class="home__social-icon" target="_blank"><i class='bx bxl-github' ></i></a>
                 </div>
 
                 <div class="home__img">    
@@ -254,7 +254,7 @@
                 <?php include("logic/capturaDeDatos.php") ?>
 
                 <a href="https://api.whatsapp.com/send?phone=573147427981" 
-                class="btn-wsp" target="_blank">
+                class="btn-wsp" target="_blank" title="Mi WhatsApp">
                     <i class="fa fa-whatsapp icono"></i>
                 </a>
             </section>

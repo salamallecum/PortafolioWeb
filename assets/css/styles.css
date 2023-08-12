@@ -102,10 +102,12 @@ img{
 
 .indicadorSatisfactorio{
   color: green;
+  font-size: 14px;
 }
 
 .indicadorError{
-  color: red
+  color: red;
+  font-size: 14px;
 }
 
 /*===== LAYOUT =====*/
@@ -551,6 +553,10 @@ img{
 .contact__form-error.is-active{
   display: block;
   animation: show-message 1s 1 normal 0s ease-out both;
+}
+
+.g-recaptcha{
+  justify-items: center;
 }
 
 .none{

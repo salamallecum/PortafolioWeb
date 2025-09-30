@@ -37,32 +37,39 @@ if(isset($_POST['envioInfoContacto'])){
 
             //Configuramos el smtp para el envio de correos
             $mail->isSMTP();
-            $mail->Host = 'smtp.office365.com';
+            $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
-            $mail->Username = 'alejoamaya1997@hotmail.com';
-            $mail->Password = 'alejo1997';
-            $mail->SMTPSecure = 'tls';
-            $mail->Port = 587;
+            $mail->Username = 'alejitoencuestas@gmail.com';
+            $mail->Password = 'wdcf hedl sads oudh';
+            $mail->SMTPSecure = 'ssl';
+            $mail->Port = 465;
 
             //Hacemos el envio del correo
-            $mail->setFrom('alejoamaya1997@hotmail.com', 'PORTAFOLIO WEB');
+            $mail->setFrom('alejitoencuestas@gmail.com', 'PORTAFOLIO WEB');
             $mail->addAddress('luisalejandroamayatorres@gmail.com');
             //$mail->addCC('alejitoencuestas@gmail.com');
 
             $mail->isHTML(true);
             $mail->Subject = $asunto;
-            $mail->Body = 'Buen día, el usuario '.$nombre.' está tratando de contactarse contigo, su información de contacto es: <br>
+            $mail->Body = 'Buen día, el/la Sr/Sra '.$nombre.' está intentando contactarse contigo, su información de contacto es: <br>
 
                             Correo electrónico: '.$correoElectronico.'<br>
                             Teléfono: '.$telefono.'<br><br>
                             Comentarios: '.$comentarios.'<br><br>
 
-                            Saludos cordiales.';
+                            Saludos.';
 
             $mail->send();
 
             ?>
-            <h3 class="indicadorSatisfactorio">* Información enviada satisfactoriamente.</h3>
+            <div class="alert alert-success" role="alert" style="display: flex;">
+                <div>
+                    <img src="assets/img/success.png" alt="">
+                </div>
+                <div>
+                    <p>&nbsp;&nbsp;Información enviada satisfactoriamente.</p>
+                </div>
+            </div>
             <?php
 
         }catch(Exception $e){
@@ -71,7 +78,14 @@ if(isset($_POST['envioInfoContacto'])){
     
     }else{
         ?>
-        <h3 class="indicadorError">* Validación de CAPTCHA requerida.</h3>
+        <div class="alert alert-warning" role="alert" style="display: flex;">
+            <div>
+               <img class="warnAlert" src="assets/img/warning.png" alt="">
+            </div>
+            <div>
+                <p>&nbsp;Validación de CAPTCHA requerida. </p>
+            </div>
+        </div>
         <?php
     }
 

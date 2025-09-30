@@ -1,4 +1,3 @@
-
 /*===== MENU SHOW =====*/ 
 const showMenu = (toggleId, navId) =>{
     const toggle = document.getElementById(toggleId),
@@ -35,32 +34,32 @@ const sr = ScrollReveal({
 });
 
 /*SCROLL HOME*/
-sr.reveal('.home__title',{}); 
-sr.reveal('.button',{delay: 200}); 
+sr.reveal('.home__titulo',{}); 
+sr.reveal('.boton',{delay: 200}); 
 sr.reveal('.home__img',{delay: 400}); 
 sr.reveal('.home__social-icon',{ interval: 200}); 
 
-/*SCROLL ABOUT*/
+/*SCROLL PERFIL PROFESIONAL*/
 sr.reveal('.about__img',{}); 
 sr.reveal('.about__subtitle',{delay: 400}); 
 sr.reveal('.about__text',{delay: 400}); 
 
-/*SCROLL SKILLS*/
-sr.reveal('.skills__subtitle',{}); 
+/*SCROLL CONOCIMIENTOS*/
 sr.reveal('.skills__text',{}); 
-sr.reveal('.skills__data',{interval: 200}); 
+sr.reveal('.accordion-item',{}); 
 sr.reveal('.skills__img',{delay: 600});
 
-/*SCROLL WORK*/
-sr.reveal('.work__img',{interval: 200}); 
+/*SCROLL EXP LABORAL*/
+sr.reveal('.card',{}); 
 
-/*SCROLL CONTACT*/
-sr.reveal('.contact__input',{interval: 200}); 
+/*SCROLL MIS PROYECTOS*/
+sr.reveal('.work__text',{}); 
+sr.reveal('.project-wrapper',{}); 
 
-/*Metodo que se invoca al iniciar la aplicación*/
-const d = document;
-d.addEventListener("DOMContentLoaded", (e) => {
-    /*filtradoYDetallesDeMisProyectos();*/
-});
+/*SCROLL CONTACTO*/
+sr.reveal('.form-control',{}); 
+sr.reveal('.invitacionEnvInfo',{}); 
+sr.reveal('.g-recaptcha',{}); 
+sr.reveal('.btn_enviarInfoContacto',{}); 
 
 

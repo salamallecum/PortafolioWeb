@@ -409,7 +409,7 @@ img{
 }
 
 .textAreaDetalleDescripcionProyecto{
-  width: 460px;
+  width: 100%;
   height: 100px;
   resize: none;
   text-align: justify;
@@ -427,8 +427,7 @@ img{
   font-size: 11px;
   background-color: #eee;
   border: 0;
-  width: 309px;
-  margin-left: 5px;
+  width: 100%;
 }
 
 .project-list .btn_detallesDeProyecto p{

@@ -310,16 +310,17 @@
                             <br>
                             <textarea type="text" id="descripcionDeProyectoModal" class="textAreaDetalleDescripcionProyecto" disabled></textarea>  
                             <br>
-                            <table>
+                            <!--<table>
                                 <tr>
-                                    <td>
-                                        <p id="tecnologiasUtilizadas">Tecnologías utilizadas: </p>
-                                    </td>
-                                    <td>
+                                    <td>-->
+                                        <p id="tecnologiasUtilizadas">Tecnologías utilizadas</p>
+                                        
+                                    <!--</td>
+                                    <td>-->
                                         <input type="text" id="tecnoUtilizadasModal" disabled>
-                                    </td>
+                                    <!--</td>
                                 </tr>
-                            </table>                           
+                            </table>-->                           
                         </div>
                         <div class="modal-footer"></div>
                       </div>

@@ -262,7 +262,7 @@
                                     <div class="card-body">
                                         <h5 class="card-title"><strong>Ing. Desarrollo TyD</strong></h5>
                                         <h6 class="card-subtitle mb-2 text-body-secondary"><i>Softland Colombia S.A.S</i></h6>
-                                        <p class="card-text" style="font-size: 13px;">Brindé atención a la mesa de servicio, haciendo seguimiento a las bases de datos, construyendo nuevas funcionalidades al software HCM y ERP de la compañía y apoyo en la construcción de funcionalidades para el software durante su migración a nuevas tecnologías.</p>
+                                        <p class="card-text" style="font-size: 13px;">Brindé atención a la mesa de servicio, haciendo seguimiento a las bases de datos, construyendo nuevas funcionalidades al software HCM y ERP de la compañía y apoyé en la construcción de funcionalidades para el software durante su migración a nuevas tecnologías.</p>
                                     </div>
                                 </div>
                             </div>

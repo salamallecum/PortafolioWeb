@@ -83,7 +83,9 @@
                     </div>
                     
                     <div>
-                        <p class="about__text">Soy un Ingeniero de sistemas apasionado por la tecnología, enfocado en el aprendizaje de nuevas herramientas y lenguajes, me gusta desarrollar proyectos que representan la solución a un problema para los que me rodean y un reto para mi crecimiento profesional y personal.</p>           
+                        <p class="about__text">Soy un Ingeniero de sistemas apasionado por la tecnología, enfocado en el aprendizaje de nuevas herramientas y lenguajes, me gusta desarrollar proyectos que representan la solución a un problema para los que me rodean y un reto para mi crecimiento profesional y personal.</p>    
+                        <br>
+                        <b class="proverbio"><i>"El auténtico conocimiento es conocer la extensión de la propia ignorancia" - Confucio</i></b>       
                     </div>                                   
                 </div>
             </section>
@@ -292,6 +294,13 @@
                                 data-tecnologia="HTML, JavaScript, Php, Bootstrap, Ajax, Jquery y MySQL" title="Ver detalles del proyecto">
                                     <img class="imagenDeProyecto" src="assets/img/misProyectosImg/logoPandora.PNG" alt="">
                                     <p>Pandora</p>
+                            </button>
+
+                            <button class="btn_detallesDeProyecto" category="java" data-bs-toggle="modal" data-bs-target="#detallesProyecto" data-imagen= "assets/img/misProyectosImg/modalEvaluate.PNG" data-nombre="Evalúate" 
+                                data-descripcion="Aplicación web de cuestionarios en la que los usuarios se registran e ingresan para responder cuestionarios con preguntas de selección multiple los cuales están clasificados por categorías que representan los temas o conocimientos, al finalizar un cuestionario el usuario obtiene un puntaje el cual es calculado teniendo en cuenta sus respuestas correctas y puede ser descargado en un archivo con formato pdf." 
+                                data-tecnologia="Springboot, Angular y MySQL" title="Ver detalles del proyecto">
+                                    <img class="imagenDeProyecto" src="assets/img/misProyectosImg/logoEvaluate.PNG" alt="">
+                                    <p>Evalúate</p>
                             </button>
                         </section>
                     </div> 

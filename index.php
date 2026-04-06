@@ -268,6 +268,15 @@
                                     </div>
                                 </div>
                             </div>
+                           <div class="col">
+                                <div class="card" style="width: 18rem;">     
+                                    <div class="card-body">
+                                        <h5 class="card-title"><strong>Desarrollador Java</strong></h5>
+                                        <h6 class="card-subtitle mb-2 text-body-secondary"><i>Periferia IT Group</i></h6>
+                                        <p class="card-text" style="font-size: 13px;">Brindé atención a la mesa de servicio, configurando pólizas y productos bancarios para el cliente BNP Paribas CARDIF, realicé seguimiento a bugs e incidencias a los software del core de negocio así como el análisis de datos y el desarrollo de nuevas funcionalidades para los mismos.</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -367,7 +376,7 @@
                 <a href="https://www.instagram.com/alejoamayatorres/" target="_blank" class="footer__icon"><i class='bx bxl-instagram' title="Mi Instagram"></i></a>
             </div>
             <p>Tel: +57 - 3147427981</p>
-            <p>2025 - Todos los derechos reservados.</p>
+            <p>2026 - Todos los derechos reservados.</p>
         </footer>
     </body>
 

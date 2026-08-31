@@ -554,12 +554,17 @@ img{
 
 /* ===== FOOTER =====*/
 .footer{
+  display: block;
+  position: relative;
+  width: 100%;
   background-color: var(--second-color);
   color: #fff;
   text-align: center;
   font-weight: var(--font-semi);
   padding: 2rem 0;
+  clear: both;
 }
+
 .footer__title{
   font-size: 2rem;
   margin-bottom: var(--mb-4);

@@ -1,3 +1,17 @@
+<?php
+
+$mensajeContacto = '';
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    ob_start();
+
+    require __DIR__ . '/logic/capturaDeDatos.php';
+
+    $mensajeContacto = ob_get_clean();
+}
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -5,9 +19,10 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!--Bootstrap-->
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
+
+
         <!--===== ESTILOS Y FUENTES =====-->
         <link rel="stylesheet" href="assets/css/styles.css"> 
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -47,6 +62,7 @@
                         <li class="nav__item"><a href="#experience" class="nav__link">Exp. Laboral</a></li>
                         <li class="nav__item"><a href="#work" class="nav__link">Mis proyectos</a></li>
                         <li class="nav__item"><a href="#contact" class="nav__link">Contacto</a></li>
+                        <button onclick="temaOscuro()" class="btn rounded-fill"><i id="dl-icon" class="bi bi-moon-fill"></i></button>
                     </ul>
                 </div>
 
@@ -56,7 +72,7 @@
             </nav>
         </header>
 
-        <main class="l-main">
+        <main>
             <!--===== HOME =====-->
             <section class="home bd-grid" id="home">
                 <div class="home__data">
@@ -176,6 +192,14 @@
                                         <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="70" aria-valuemin="0" aria-valuemax="70">
                                             <div class="progress-bar" style="width: 70%">70%</div>
                                         </div>
+                                        <br>
+                                        <div class="skills__names">         
+                                            <img src="assets/img/know/mongodb.png" alt="">
+                                            <span class="skills__name">&nbspMongoDB</span>
+                                        </div>
+                                        <div class="progress" role="progressbar" aria-label="Example with label" aria-valuenow="50" aria-valuemin="0" aria-valuemax="50">
+                                            <div class="progress-bar" style="width: 50%">50%</div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -238,9 +262,9 @@
             <section class="experience seccion" id="experience">
                 <h2 class="seccion-titulo">Experiencia laboral</h2>
                 <br>
-                <div class="experience bd-grid">
-                    <div class="container text-center">
-                        <div class="row">
+                <div class="container text-center">
+                    <div class="row">
+                        <div class="col">
                             <div class="col">
                                 <div class="card" style="width: 18rem;">
                                     <div class="card-body">
@@ -250,31 +274,42 @@
                                     </div>
                                 </div>    
                             </div>
-                            <div class="col">
-                                <div class="card" style="width: 18rem;"> 
-                                    <div class="card-body">
-                                        <h5 class="card-title"><strong>Ing. Desarrollo Continuidad</strong></h5>
-                                        <h6 class="card-subtitle mb-2 text-body-secondary"><i>Carvajal Tecnología y Servicios S.A</i></h6>
-                                        <p class="card-text" style="font-size: 13px;">Brindé atención a la mesa de servicio, haciendo seguimiento, depuración y corrección de funcionalidades a los servicios del software de la compañía con su documentación correspondiente.</p>
-                                    </div>
+                        </div>
+                        <div class="col">
+                            <div class="card" style="width: 18rem;"> 
+                                <div class="card-body">
+                                    <h5 class="card-title"><strong>Ing. Desarrollo Continuidad</strong></h5>
+                                    <h6 class="card-subtitle mb-2 text-body-secondary"><i>Carvajal Tecnología y Servicios S.A</i></h6>
+                                    <p class="card-text" style="font-size: 13px;">Brindé atención a la mesa de servicio, haciendo seguimiento, depuración y corrección de funcionalidades a los servicios del software de la compañía con su documentación correspondiente.</p>
                                 </div>
                             </div>
-                            <div class="col">
-                                <div class="card" style="width: 18rem;">     
-                                    <div class="card-body">
-                                        <h5 class="card-title"><strong>Ing. Desarrollo TyD</strong></h5>
-                                        <h6 class="card-subtitle mb-2 text-body-secondary"><i>Softland Colombia S.A.S</i></h6>
-                                        <p class="card-text" style="font-size: 13px;">Brindé atención a la mesa de servicio, haciendo seguimiento a las bases de datos, construyendo nuevas funcionalidades al software HCM y ERP de la compañía y apoyé en la construcción de funcionalidades para el software durante su migración a nuevas tecnologías.</p>
-                                    </div>
+                        </div>
+                        <div class="col">
+                            <div class="card" style="width: 18rem;">     
+                                <div class="card-body">
+                                    <h5 class="card-title"><strong>Ing. Desarrollo TyD</strong></h5>
+                                    <h6 class="card-subtitle mb-2 text-body-secondary"><i>Softland Colombia S.A.S</i></h6>
+                                    <p class="card-text" style="font-size: 13px;">Brindé atención a la mesa de servicio, haciendo seguimiento a las bases de datos, construyendo nuevas funcionalidades al software HCM y ERP de la compañía y apoyé en la construcción de funcionalidades para el software durante su migración a nuevas tecnologías.</p>
                                 </div>
                             </div>
-                           <div class="col">
-                                <div class="card" style="width: 18rem;">     
-                                    <div class="card-body">
-                                        <h5 class="card-title"><strong>Desarrollador Java</strong></h5>
-                                        <h6 class="card-subtitle mb-2 text-body-secondary"><i>Periferia IT Group</i></h6>
-                                        <p class="card-text" style="font-size: 13px;">Brindé atención a la mesa de servicio, configurando pólizas y productos bancarios para el cliente BNP Paribas CARDIF, realicé seguimiento a bugs e incidencias a los software del core de negocio así como el análisis de datos y el desarrollo de nuevas funcionalidades para los mismos.</p>
-                                    </div>
+                        </div>
+                        <div class="col">
+                            <div class="card" style="width: 18rem;">     
+                                <div class="card-body">
+                                    <h5 class="card-title"><strong>Desarrollador Java</strong></h5>
+                                    <h6 class="card-subtitle mb-2 text-body-secondary"><i>Periferia IT Group</i></h6>
+                                    <p class="card-text" style="font-size: 13px;">Brindé atención a la mesa de servicio, configurando pólizas y productos bancarios para el cliente BNP Paribas CARDIF, realicé seguimiento a bugs e incidencias a los software del core de negocio así como el análisis de datos y el desarrollo de nuevas funcionalidades para los mismos.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="card" style="width: 18rem;">     
+                                <div class="card-body">
+                                    <h5 class="card-title"><strong>Desarrollador Backend</strong></h5>
+                                    <h6 class="card-subtitle mb-2 text-body-secondary"><i>Michael Page</i></h6>
+                                    <p class="card-text" style="font-size: 13px;">Desarrollé API’s REST mediante framework Springboot para el cliente Porvenir con su respectiva documentación, construcción de pruebas unitarias, refactorización de código, despliegue e integración continua.</p>
                                 </div>
                             </div>
                         </div>
@@ -360,8 +395,8 @@
                         
                         <!--captcha no soy un robot-->
                         <div class="g-recaptcha" data-sitekey="6LebIJwnAAAAADdHjex-5M1AMJogCgAGU1TJ_rQA"></div>
-                        <?php include("logic/capturaDeDatos.php") ?>
-                        <input type="submit" id="btn_enviarDatos" name="envioInfoContacto" class="btn_enviarInfoContacto" title="Enviar" class="contact__button button"></input>
+                        <?php echo $mensajeContacto; ?>
+                        <input type="submit" id="btn_enviarDatos" name="envioInfoContacto" class="btn_enviarInfoContacto" title="Enviar">
                     </form>
                 </div>
             </section>
@@ -410,5 +445,14 @@
             });
         });
     </script>
+
+    <!--Script para el evvento del modo oscuro-->
+    <script type='text/javascript'>
+        /*EVENTOS TEMA OSCURO*/
+        const temaOscuro = () =>{
+            document.querySelector("body").setAttribute("data-bs-theme", "dark");
+            document.querySelector("#dl-icon").setAttribute("class", "bi bi-sun-fill");
+        }
+    </script>    
 
 </html>

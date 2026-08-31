@@ -1,11 +1,14 @@
 <?php
 
-//phpinfo();
 use PHPMailer\PHPMailer\PHPMailer;
-use PHPMailer\PHPMailer\SMTP;
 use PHPMailer\PHPMailer\Exception;
 
-require 'vendor/autoload.php';
+require_once __DIR__ . '/vendor/autoload.php';
+
+
+// =====================================================
+// PROCESAR FORMULARIO
+// =====================================================
 
 //Capturamos el evento del boton de envio de formulario de contacto
 if(isset($_POST['envioInfoContacto'])){
@@ -40,8 +43,8 @@ if(isset($_POST['envioInfoContacto'])){
             $mail->Host = 'smtp.gmail.com';
             $mail->SMTPAuth = true;
             $mail->Username = 'alejitoencuestas@gmail.com';
-            $mail->Password = 'wdcf hedl sads oudh';
-            $mail->SMTPSecure = 'ssl';
+            $mail->Password = 'rdja brky vpzp bria';
+            $mail->SMTPSecure = PHPMailer::ENCRYPTION_SMTPS; // para puerto 465
             $mail->Port = 465;
 
             //Hacemos el envio del correo
@@ -90,5 +93,5 @@ if(isset($_POST['envioInfoContacto'])){
     }
 
 }
-
 ?>
+
